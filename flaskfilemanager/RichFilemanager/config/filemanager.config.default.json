@@ -5,6 +5,7 @@
         "showTitleAttr": false,
         "showConfirmation": true,
         "browseOnly": false,
+        "searchBox": true,
         "fileSorting": "NAME_ASC",
         "folderPosition": "bottom",
         "quickSelect": false,
@@ -19,18 +20,12 @@
             "copy",
             "move",
             "delete",
-            "extract",
-            "createFolder"
+            "extract"
         ]
     },
     "language": {
         "default": "en",
-        "available": ["ar", "bs", "ca", "cs", "da", "de", "el", "en", "es", "fa", "fi", "fr", "he", "hu", "it", "ja", "nl", "pl", "pt", "ru", "sv", "th", "tr", "vi", "zh-CN", "zh-TW"]
-    },
-    "formatter": {
-        "datetime": {
-            "skeleton": "yMMMdHm"
-        }
+        "available": ["ar", "bs", "ca", "cs", "da", "de", "el", "en", "es", "fa", "fi", "fr", "he", "hu", "it", "ja", "nl", "pl", "pt", "ru", "sv", "th", "tr", "vn", "zh-cn", "zh-tw"]
     },
     "filetree": {
         "enabled": true,
@@ -79,12 +74,6 @@
         "audio": ["ogg", "mp3", "wav"],
         "video": ["ogv", "avi", "mkv", "mp4", "webm", "m4v"]
     },
-    "search": {
-        "enabled": true,
-        "recursive": false,
-        "caseSensitive": false,
-        "typingDelay": 500
-    },
     "viewer": {
         "absolutePath": true,
         "previewUrl": false,
@@ -129,6 +118,34 @@
             ],
             "readerWidth": "95%",
             "readerHeight": "600"
+        },
+        "onlyoffice": {
+            "enabled": false,
+            "extensions": [
+                "doc",
+                "docx",
+                "odt",
+                "rtf",
+                "txt",
+                "pdf",
+                "html",
+                "epub",
+                "xps",
+                "djvu",
+                "xls",
+                "xlsx",
+                "ods",
+                "csv",
+                "pptx",
+                "ppt",
+                "odp"
+            ],
+            "editorWidth": "95%",
+            "editorHeight": "600",
+            "apiUrl": "https://doc.onlyoffice.com/web-apps/apps/api/documents/api.js",
+            "connectorUrl": false,
+            "downloadUrl": false,
+            "callbackUrl": false
         },
         "opendoc": {
             "enabled": true,
@@ -192,5 +209,5 @@
         "extra_js_async": true
     },
     "url": "https://github.com/servocoder/RichFilemanager",
-    "version": "2.7.6"
+    "version": "2.6.3"
 }
