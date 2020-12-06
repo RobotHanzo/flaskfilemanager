@@ -8,7 +8,7 @@ setup(
     name='flaskfilemanager',
     packages=['flaskfilemanager'],
     include_package_data=True,
-    version='0.0.6',
+    version='0.0.6.1',
     description='RichFilemanager blueprint for Flask web applications - adds a ckeditor compatible file manager / browser',
     author='Stephen Brown (Little Fish Solutions LTD)',
     author_email='opensource@littlefish.solutions',
