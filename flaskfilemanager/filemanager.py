@@ -170,11 +170,9 @@ def userfile(filename):
 @filemanager_blueprint.route('/connectors/py/filemanager.py')
 def connector():
     # Access control
+    log.debug(request.args)
     if _access_control_function and not _access_control_function():
         abort(404)
-
-    log.debug(request.args)
-
     mode = request.args.get('mode')
 
     resp = None
