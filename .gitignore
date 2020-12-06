@@ -6,4 +6,6 @@ flaskfilemanager.egg-info
 env
 out.log
 tmp-webapp-uploads
-
+/.idea/
+/build/
+/dist/

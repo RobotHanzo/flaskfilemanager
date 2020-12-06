@@ -1,3 +1,110 @@
+Version 2.7.6
+---------------------------
+- improved renderer responsiveness while recursive search #315
+- added custom request params to the "downloadItem" action #318
+- enhanced .Net Core Framework connector #316 #319
+- added capability to set custom client configuration file path #329
+- prevented caching language files #332
+- updated PHP connector dependency to v1.2.6
+(https://github.com/servocoder/RichFilemanager-PHP/releases/tag/v1.2.6)
+
+
+Version 2.7.5
+---------------------------
+- bugfix: server-side errors haven't shown on upload #305
+- datetime types received from server extended to: seconds, milliseconds and datetime string #308
+- updated PHP connector dependency to v1.2.4
+(https://github.com/servocoder/RichFilemanager-PHP/releases/tag/v1.2.4)
+
+
+Version 2.7.4
+---------------------------
+- fixed CodeMirror lib missed file #301
+- updated CodeMirror package to v5.35.0
+- updated PHP connector dependency to v1.2.3
+(https://github.com/servocoder/RichFilemanager-PHP/releases/tag/v1.2.3)
+
+
+Version 2.7.3
+---------------------------
+- hotfix
+
+
+Version 2.7.2
+---------------------------
+- added optional connector "options.capabilities" in the initiate action #272
+- avoid loading right panel folder contents when unfolding tree if click on +(plus) icon #293
+- included resourceObject to "selectItem" callback #294
+- minified and combined assets with new grunt config #295
+- implemented customizable upload parameter name #297
+- updated russian translations (minor fixes) #292
+- updated dutch translations
+- updated PHP connector dependency to v1.2.2
+(https://github.com/servocoder/RichFilemanager-PHP/releases/tag/v1.2.2)
+
+Backward incompatible changes:
+- restructure and refactor source package files and third-party libs
+
+
+Version 2.7.1
+---------------------------
+- implemented RFM plugin public methods "refreshFolder" and "loadFolder" #275
+- bugfix: problem with folder downloading #273
+- bigfix: redirect on failed authentication doesn't work #278
+- bugfix: fileroot issue with symbolic links #285
+- updated PHP connector dependency to v1.2.1
+(https://github.com/servocoder/RichFilemanager-PHP/releases/tag/v1.2.1)
+
+
+Version 2.7.0
+---------------------------
+- server-side search implemented, relative to the open folder #271
+- implemented client-side datetime formatting using globalizejs and cldrjs #227
+- added "createFolder" capability in JSON config file (affects appropriate UI elements visibility) #227
+- adjusted language codes and UI lang files names #227
+- added new translations into language files #269 #271
+- changed behavior of the "close" button of preview mode; made it more straightforward, respecting search mode
+- PHP connector: implemented events and listeners (as callback functions) for API operations #236 servocoder/RichFilemanager#24
+- PHP connector: throw an error if delete operation failed servocoder/RichFilemanager#29
+- PHP connector: allow double underscores in file names servocoder/RichFilemanager#28
+- PHP connector: automatically exclude image thumbnails folder from the output servocoder/RichFilemanager#27
+- PHP connector: avoid spaces and parentheses inserted into a file name while upload #112 servocoder/RichFilemanager#26
+- PHP connector: use a single point to calculate filesize across application servocoder/RichFilemanager#25
+- JAVA connector: actualized to the latest API version and support all features; moved to separate repository
+- bugfix: fixed missed "home" breadcrumbs icon on after RFM initiated
+- bugfix: PHP connector local storage always return "false" when deleting file servocoder/RichFilemanager#29
+
+Backward incompatible changes:
+- API: error response format altered to correspond to JSON API standard #210 servocoder/RichFilemanager#30
+- API: new error handling flow; required HTTP headers; strict JSON API conformity #270 servocoder/RichFilemanager#33
+- API: simplified workflow of the "download" method, doesn't require AJAX API extra call anymore #248 #265 servocoder/RichFilemanager#32
+- API: "getfile" API method RENAMED to "getinfo" and return either file or folder stats. Restriction to handle files only is removed #270
+- API: "getfolder" API method RENAMED to "readfolder". No changes in functionality #270
+- API: "readfile", "getimage" and "download" methods USE THE SAME FLOW to read file content and write it to the output #270
+- API: "editfile" method is REMOVED, instead of it the "readfile" is used at the client #270
+- API: "seekfolder" new method is ADDED #271 servocoder/RichFilemanager#34
+- API file and folder object response structure: removed "timestamp" attribute; "created" and "modified" attributes now contain unix timestamps instead of formatted datetime strings #227
+- "options.searchBox" configuration option is removed, new section "search" added instead #271
+
+
+Version 2.6.5
+---------------------------
+- tightened dependencies between "richfilemanager-php" and main packages #268
+- JAVA connector: replaced "title" with "message" in error response format #231
+- bugfix: broken modal window in CKEditor integration when open "table" tool #263
+- Vietnamese language: updated translations #267
+- Czech language: updated translations
+
+
+Version 2.6.4
+---------------------------
+- reworked folder loader for filetree and right panel #255
+- implemented "beforeSetRequestParams" and "beforeSendRequest" callback functions #260
+- bugfix: should close folder in right panel upon delete its ancestor n filetree #261
+- added template for GitHub issues
+- better file renderers support
+
+
 Version 2.6.3
 ---------------------------
 - improvement: direct upload upon simple file uploads #247
